@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag speedtest-cli:$(date +%s) --tag speedtest-cli:latest
+      run: docker build . --file Dockerfile --tag ghcr.io/benhubert/speedtest-cli:latest
     - name: Publish the Docker image
       run: docker push ghcr.io/benhubert/speedtest-cli:latest
